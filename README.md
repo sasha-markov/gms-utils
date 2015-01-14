@@ -5,7 +5,6 @@ In order to generate AIM data in GAMESS calculations you must use `AIMPAC=.TRUE.
 Then in command line:
 
 ```
-getwfn.py -f _filename.dat_
-
+getwfn.py -f somefile.dat
 ```
-If successful `filename.wfn` will appear in the same folder as `filename.dat` file.
+If successful `somefile.wfn` will appear in the same folder as `somefile.dat` file.
