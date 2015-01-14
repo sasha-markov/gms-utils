@@ -7,4 +7,4 @@ Then in command line:
 ```
 getwfn.py -f somefile.dat
 ```
-If successful `somefile.wfn` will appear in the same folder as `somefile.dat` file.
+If successful, `somefile.wfn` will appear in the same folder as `somefile.dat` file.
