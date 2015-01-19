@@ -10,7 +10,7 @@ parser.add_option("-f", "--file", dest="filename")
 with open(options.filename, "r") as f:
     filename, fileext = os.path.splitext(options.filename)
     sw = False
-    for line in f.readlines():
+    for line in f:
         if ("----- TOP OF INPUT FILE FOR BADER'S AIMPAC PROGRAM -----" in
             line):
                 sw = True
