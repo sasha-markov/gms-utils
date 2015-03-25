@@ -12,11 +12,12 @@ getwfn.py -f somefile.dat
 If successful, `somefile.wfn` will appear in the same folder as `somefile.dat` file.
 
 ## getenergy.py
-Contains function that returns the last value of the total energy in a
-given GAMESS logfile.
+Contains functions that (1) returns the last value of the total energy and
+(2) returns the value of the zero-point energy in a given GAMESS logfile.
 ### Usage
 
 ```
 import getenergy
 getenergy.get_total_energy('/path/to/file.log')
+getenergy.getzpe('/path/to/file.log')
 ```
