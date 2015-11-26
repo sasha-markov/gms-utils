@@ -12,8 +12,17 @@ getwfn.py -f somefile.dat
 If successful, `somefile.wfn` will appear in the same folder as `somefile.dat` file.
 
 ## getenergy.py
-Contains functions that (1) returns the last value of the total energy and
-(2) returns the value of the zero-point energy in a given GAMESS logfile.
+Contains following functions with path to GAMESS logfile as an argument:
++ `get_total_energy` returns a last value of total energy (in
+   hartree) in a given logfile
++ `getzpe` returns value of the zero-point energy (in kcal/mol)
++ `get_thermochem` returns list (Hc, Gc, Sc) where Hc, Gc, Sc are
+thermal corrections to thermodynamical functions H, G, S
++ `get_mo_energies` returns one list of molecular orbitals energies
+  (in hartree) for RHF calculation or two lists, alpha and beta, for
+  UHF calculation
++ `get_sol_free_energy` returns value of total free energy (in
+  hartree) in solvent for PCM calculatio.
 ### Usage
 
 ```

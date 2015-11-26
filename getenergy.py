@@ -97,3 +97,12 @@ def get_mo_energies(logfile):
                 swc = False
                 swd = False
     return eigveca, eigvecb, mosalpha, mosbeta
+
+
+def get_sol_free_energy(logfile):
+    with open(logfile, 'r') as f:
+        s = re.search(r' TOTAL FREE ENERGY IN SOLVENT\s+=\s+-\d+.\d+',
+                          f.read())
+        s = s.group(0).split()        
+    return eval(s[6])
+
