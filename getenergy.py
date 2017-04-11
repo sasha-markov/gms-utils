@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+import numpy as np
 
 
 def get_total_energy(logfile):
@@ -11,7 +12,17 @@ def get_total_energy(logfile):
     return eval(s[3])
 
 
-def getzpe(logfile):
+def get_total_energies(logfile):
+    with open(logfile, 'r') as f:
+        l = []
+        for line in f:
+            if (" NSERCH:") in line:
+                s = line.split()
+                l.append(s[3])
+    return l
+
+
+def get_zpe(logfile):
     with open(logfile, 'r') as f:
         sw = False
         i = 0
@@ -26,7 +37,7 @@ def getzpe(logfile):
                 i = i + 1
                 s = s.split()
         if not sw:
-            print "There is no ZPE data in the file!"
+            print("There is no ZPE data in the file!")
     return eval(s[0])
 
 
@@ -102,7 +113,6 @@ def get_mo_energies(logfile):
 def get_sol_free_energy(logfile):
     with open(logfile, 'r') as f:
         s = re.search(r' TOTAL FREE ENERGY IN SOLVENT\s+=\s+-\d+.\d+',
-                          f.read())
-        s = s.group(0).split()        
+                      f.read())
+        s = s.group(0).split()
     return eval(s[6])
-

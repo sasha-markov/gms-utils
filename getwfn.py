@@ -20,4 +20,4 @@ with open(options.filename, "r") as f, open(filename + ".wfn", "w") as o:
         if sw:
             o.write(line)
     if not sw:
-        print "There is no AIM data in " + filename
+        print("There is no AIM data in " + filename)
