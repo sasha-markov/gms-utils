@@ -1,7 +1,8 @@
 # Simple functions for working with GANESS-US output files
 
 ## getenergy.py
-Contains following functions with the path to GAMESS logfile as an argument:
+Contains following functions with the path to [GAMESS-US](http://www.msg.ameslab.gov/gamess/)
+logfile as an argument:
 + `get_total_energy` returns the last value of total energy (in
 hartree) in a given logfile
 + `get_total_energies` returns a list of total energies (in hartree)
