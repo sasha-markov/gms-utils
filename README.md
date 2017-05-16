@@ -43,9 +43,9 @@ import numpy as np
 import get_irc
 
 
-l = get_irc.get_irc_energy('/path/to/left.log')
-r = get_irc.get_irc_energy('/path/to/right.log')
-ts = get_irc.get_irc_energy('/path/to/ts.log')
+l = '/path/to/left.log'
+r = '/path/to/right.log'
+ts = '/path/to/ts.log'
 x, y = get_irc.ircjoin(l, r, ts)
 plt.plot(x, y, 'k.')
 ```
