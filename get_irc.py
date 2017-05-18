@@ -26,8 +26,10 @@ def get_irc_energy(logfile):
 def ircjoin(l, r, ts):
     xl, el = get_irc_energy(l)
     xr, er = get_irc_energy(r)
-    xl.insert(0, 0)
-    el.insert(0, getenergy.get_total_energy(ts))
+    xl.reverse()
+    el.reverse()
+    xr.insert(0, 0)
+    er.insert(0, getenergy.get_total_energy(ts))
 
     def invert(a):
         return float(a) * (-1)
