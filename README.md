@@ -1,4 +1,4 @@
-# Simple functions for working with GANESS-US output files
+# Simple functions for working with GAMESS-US output files
 
 ## getenergy.py
 Contains following functions with the path to [GAMESS-US](http://www.msg.ameslab.gov/gamess/)
